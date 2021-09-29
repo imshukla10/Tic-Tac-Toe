@@ -32,6 +32,7 @@
         app:srcCompat="@drawable/grid" />
 
     <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="0dp"
         android:layout_height="420dp"
         android:orientation="vertical"
@@ -60,18 +61,18 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="33.33"
-                android:padding="20sp"
                 android:onClick="tapTap"
-                android:tag="2"/>
+                android:padding="20sp"
+                android:tag="2" />
 
             <ImageView
                 android:id="@+id/imageView3"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="33.33"
-                android:padding="20sp"
                 android:onClick="tapTap"
-                android:tag="3"/>
+                android:padding="20sp"
+                android:tag="3" />
         </LinearLayout>
 
         <LinearLayout
@@ -85,27 +86,27 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="33.33"
-                android:padding="20sp"
                 android:onClick="tapTap"
-                android:tag="4"/>
+                android:padding="20sp"
+                android:tag="4" />
 
             <ImageView
                 android:id="@+id/imageView5"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="33.33"
-                android:padding="20sp"
                 android:onClick="tapTap"
-                android:tag="5"/>
+                android:padding="20sp"
+                android:tag="5" />
 
             <ImageView
                 android:id="@+id/imageView6"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="33.33"
-                android:padding="20sp"
                 android:onClick="tapTap"
-                android:tag="6"/>
+                android:padding="20sp"
+                android:tag="6" />
         </LinearLayout>
 
         <LinearLayout
@@ -119,28 +120,39 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="33.33"
-                android:padding="20sp"
                 android:onClick="tapTap"
-                android:tag="7"/>
+                android:padding="20sp"
+                android:tag="7" />
 
             <ImageView
                 android:id="@+id/imageView8"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="33.33"
-                android:padding="20sp"
                 android:onClick="tapTap"
-                android:tag="8"/>
+                android:padding="20sp"
+                android:tag="8" />
 
             <ImageView
                 android:id="@+id/imageView9"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="33.33"
-                android:padding="20sp"
                 android:onClick="tapTap"
-                android:tag="9"/>
+                android:padding="20sp"
+                android:tag="9" />
         </LinearLayout>
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="X's Turn Tap to Play"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginBottom="20dp"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
