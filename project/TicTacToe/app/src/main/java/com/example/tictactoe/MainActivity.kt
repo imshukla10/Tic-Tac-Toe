@@ -14,7 +14,7 @@ class MainActivity : AppCompatActivity() {
     var gameActive:Boolean = true
     //0-X
     //1-O
-    var activePlayer=0;
+    var activePlayer=0
     var gamesState = arrayOf(2,2,2,2,2,2,2,2,2,)
 //    0-X
 //    1-O
@@ -25,15 +25,15 @@ class MainActivity : AppCompatActivity() {
 
     fun tapTap(view: View)
     {
-        var img: ImageView = view as ImageView
-        var tapped = Integer.parseInt(img.getTag().toString())
+        val img: ImageView = view as ImageView
+        val tapped = Integer.parseInt(img.getTag().toString())
         if(!gameActive){
             gameReset()
         }
         if (gamesState[tapped] == 2 && gameActive) {
-            gamesState[tapped] == activePlayer
+            gamesState[tapped] = activePlayer
             img.translationY = -1000f
-            var status = findViewById<TextView>(R.id.textView2)
+            val status = findViewById<TextView>(R.id.textView2)
             if (activePlayer == 0) {
                 img.setImageResource(R.drawable.x)
                 activePlayer = 1
@@ -51,6 +51,7 @@ class MainActivity : AppCompatActivity() {
             if((gamesState[winPosition[0]]==gamesState[winPosition[1]]) && (gamesState[winPosition[1]]==gamesState[winPosition[2]]) && gamesState[winPosition[0]]!=2)
             {
                 var winner:String
+                gameActive = false
                 if (gamesState[winPosition[0]]==0){
                     winner = "X has won"
                 }
@@ -58,8 +59,9 @@ class MainActivity : AppCompatActivity() {
                     winner = "O has won"
                 }
 //              Winner anouncement
-                var status = findViewById<TextView>(R.id.textView2)
+                val status = findViewById<TextView>(R.id.textView2)
                 status.setText(winner)
+
             }
 
         }
@@ -71,15 +73,15 @@ class MainActivity : AppCompatActivity() {
         for(i in 0..gamesState.size){
             gamesState[i] = 2
         }
-        var imageView = findViewById<ImageView>(R.id.imageView1).setImageResource(0)
-        var imageView2 = findViewById<ImageView>(R.id.imageView2).setImageResource(0)
-        var imageView3 = findViewById<ImageView>(R.id.imageView3).setImageResource(0)
-        var imageView4 = findViewById<ImageView>(R.id.imageView4).setImageResource(0)
-        var imageView5 = findViewById<ImageView>(R.id.imageView5).setImageResource(0)
-        var imageView6 = findViewById<ImageView>(R.id.imageView6).setImageResource(0)
-        var imageView7 = findViewById<ImageView>(R.id.imageView7).setImageResource(0)
-        var imageView8 = findViewById<ImageView>(R.id.imageView8).setImageResource(0)
-        var imageView9 = findViewById<ImageView>(R.id.imageView9).setImageResource(0)
+        findViewById<ImageView>(R.id.imageView1).setImageResource(0)
+        findViewById<ImageView>(R.id.imageView2).setImageResource(0)
+        findViewById<ImageView>(R.id.imageView3).setImageResource(0)
+        findViewById<ImageView>(R.id.imageView4).setImageResource(0)
+        findViewById<ImageView>(R.id.imageView5).setImageResource(0)
+        findViewById<ImageView>(R.id.imageView6).setImageResource(0)
+        findViewById<ImageView>(R.id.imageView7).setImageResource(0)
+        findViewById<ImageView>(R.id.imageView8).setImageResource(0)
+        findViewById<ImageView>(R.id.imageView9).setImageResource(0)
 
     }
 }
